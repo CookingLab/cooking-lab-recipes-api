@@ -22,7 +22,6 @@ public class CookinglabApplication {
         String mongoPassword = dotenv.get("MONGO_PASSWORD");
         String host = dotenv.get("MONGO_HOST");
         String connectionString = "mongodb+srv://" + mongoUser + ":" + mongoPassword + "@" + host;
-        System.out.println("STRING: " + connectionString);
 
         ServerApi serverApi = ServerApi.builder()
                 .version(ServerApiVersion.V1)
