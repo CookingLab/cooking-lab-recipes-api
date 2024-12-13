@@ -17,6 +17,8 @@ import org.bson.Document;
 @SpringBootApplication
 public class CookinglabApplication {
 	public static void main(String[] args) {
+        SpringApplication.run(CookinglabApplication.class, args);
+
         Dotenv dotenv = Dotenv.load();
         String mongoUser = dotenv.get("MONGO_USER");
         String mongoPassword = dotenv.get("MONGO_PASSWORD");
