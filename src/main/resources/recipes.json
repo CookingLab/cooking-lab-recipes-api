@@ -1,5 +1,9 @@
 [
   {
+      "cusineType": ["American"],
+      "dietLabels" : ["Low-Carb"],
+      "mealType": ["Dessert"],
+      "healthLabels": ["Vegetarian"],
       "label": "Bittersweet Chocolate And Cardamom Cupcakes",
       "image": "imageLink",
       "url": "http://www.tarteletteblog.com/2008/10/bittersweet-chocolate-and-cardamom.html",

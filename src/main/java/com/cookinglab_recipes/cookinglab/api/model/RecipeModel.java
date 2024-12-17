@@ -13,16 +13,24 @@ public class RecipeModel {
     private String image;
     private String url;
     private List<String> ingredientLines;
+    private List<String> cusineType;
+    private List<String> dietLabels;
+    private List<String> mealType;
+    private List<String> healthLabels;
 
     // Constructor
     public RecipeModel() {
     }
     
-    public RecipeModel(int id, String label, String image, String url, List<String> ingredientLines) {
+    public RecipeModel (int id, String label, String image, String url, List<String> ingredientLines, List<String> cusineType, List<String> dietLabels, List<String> mealType, List<String> healthLabels) {
         this.id = id;
         this.label = label;
         this.image = image;
         this.url = url;
+        this.cusineType = cusineType;
+        this.dietLabels = dietLabels;
+        this.mealType = mealType;
+        this.healthLabels = healthLabels;
     }
 
     // Getters and Setters
@@ -64,6 +72,38 @@ public class RecipeModel {
     public String getImage() {
         return image;
     }
+    
+    public List<String> getCusineType() {
+        return cusineType;
+    }
+    
+    public void setCusineType (List<String> cusineType) {
+         this.cusineType = cusineType;
+    }
+    
+    public List<String> getDietLabels() {
+        return dietLabels;
+    }
+    
+    public void setDietLabels (List<String> dietLabels) {
+         this.dietLabels = dietLabels;
+    }
+    
+    public List<String> getMealType() {
+        return mealType;
+    }
+    
+    public void setMealType (List<String> mealType) {
+         this.mealType = mealType;
+    }
+    
+    public List<String> getHealthLabels() {
+        return healthLabels;
+    }
+    
+    public void setHealthLabels (List<String> healthLabels) {
+         this.healthLabels = healthLabels;
+    }
 
     @Override
     public String toString() {
@@ -73,6 +113,10 @@ public class RecipeModel {
                 ", url='" + url + '\'' +
                 ", image='" + image + '\'' +
                 ", ingredients=" + ingredientLines +
+                ", cusineType=" + cusineType +
+                ", dietLabels=" + dietLabels +
+                ", mealType=" + mealType +
+                ", healthLabels=" + healthLabels +
                 '}';
     }
 }
