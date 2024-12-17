@@ -8,12 +8,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Recipes")
 public class RecipeModel {
     @Id
-    private int id;
+    private String id;
     private String label;
     private String image;
     private String url;
     private List<String> ingredientLines;
-    private List<String> cusineType;
+    private List<String> cuisineType;
     private List<String> dietLabels;
     private List<String> mealType;
     private List<String> healthLabels;
@@ -22,23 +22,23 @@ public class RecipeModel {
     public RecipeModel() {
     }
     
-    public RecipeModel (int id, String label, String image, String url, List<String> ingredientLines, List<String> cusineType, List<String> dietLabels, List<String> mealType, List<String> healthLabels) {
+    public RecipeModel (String id, String label, String image, String url, List<String> ingredientLines, List<String> cuisineType, List<String> dietLabels, List<String> mealType, List<String> healthLabels) {
         this.id = id;
         this.label = label;
         this.image = image;
         this.url = url;
-        this.cusineType = cusineType;
+        this.cuisineType = cuisineType;
         this.dietLabels = dietLabels;
         this.mealType = mealType;
         this.healthLabels = healthLabels;
     }
 
     // Getters and Setters
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getLabel() {
@@ -73,12 +73,12 @@ public class RecipeModel {
         return image;
     }
     
-    public List<String> getCusineType() {
-        return cusineType;
+    public List<String> getCuisineType() {
+        return cuisineType;
     }
     
-    public void setCusineType (List<String> cusineType) {
-         this.cusineType = cusineType;
+    public void setCuisineType (List<String> cuisineType) {
+         this.cuisineType = cuisineType;
     }
     
     public List<String> getDietLabels() {
@@ -113,7 +113,7 @@ public class RecipeModel {
                 ", url='" + url + '\'' +
                 ", image='" + image + '\'' +
                 ", ingredients=" + ingredientLines +
-                ", cusineType=" + cusineType +
+                ", cuisineType=" + cuisineType +
                 ", dietLabels=" + dietLabels +
                 ", mealType=" + mealType +
                 ", healthLabels=" + healthLabels +

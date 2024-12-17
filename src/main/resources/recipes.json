@@ -1,6 +1,6 @@
 [
   {
-      "cusineType": ["American"],
+      "cuisineType": ["American"],
       "dietLabels" : ["Low-Carb"],
       "mealType": ["Dessert"],
       "healthLabels": ["Vegetarian"],
